@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #FFF2F2;
+}
+.movie-row{
+    margin-left: 1px;
+}
+.row-images{
+    z-index: 1;
+    display: flex;
+    overflow-y: visible;
+    overflow-x: scroll;
+}
+.row-poster{
+    max-height: 125px;
+    margin-right: 5px;
+    border-radius: 3px;
+    object-fit: contain;
+    transition: 0.6s all ease-in;
+}
+body{
+    font-family: 'DM Regular';
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'DM Bold';
+}
+strong,a,button{
+    font-family: 'DM Medium';
+}
+.img-responsive{
+    transition: all 1.2s ease-in-out;
+}
+.img-responsive:hover{
+    transform: scale(1.1);
+}

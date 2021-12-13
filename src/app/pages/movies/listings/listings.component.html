@@ -1,0 +1,14 @@
+<div class="container-fluid pt-5">
+      <div class='movie-row'>
+            <div class="mb-3" *ngFor="let genre of GenreList">
+                  <h3 class="text-dark">{{genre}}</h3>
+                  <div class="row-images">
+                        <div *ngFor="let item of moviesList; let s = index">
+                              <a *ngIf="item?.genres.includes(genre)" [routerLink]="['details', item?.slug]" routerLinkActive="router-link-active" >
+                                    <img class="img-responsive" width="250px" [src]="item?.poster" [alt]="item?.slug" />
+                              </a>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>

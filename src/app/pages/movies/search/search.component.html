@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class='movie-row pt-5'>
+         <h3 class="text-dark text-center">Search Result</h3>
+        <div class="row-images">
+            <ng-container *ngIf="!gVars?.movieResult.length">
+                <div class="d-flex justify-content-center w-100">
+                    <p class="text-dark fs-1">Your search for <strong>{{searchTerm}}</strong> did not yield results, please try another term</p> 
+                </div>
+            </ng-container>
+            <ng-container *ngFor="let item of gVars.movieResult; let s = index">
+                <a [routerLink]="['/home/details',item?.slug]" routerLinkActive="router-link-active" >
+                    <img class="img-responsive" width="250px" [src]="item?.poster" [alt]="item?.slug" />
+                </a>
+            </ng-container>
+        </div>
+    </div>
+</div>
